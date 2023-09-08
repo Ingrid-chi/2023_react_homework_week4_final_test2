@@ -1,0 +1,87 @@
+.wrapper {
+  width: 500px;
+
+  @media screen and (max-width: 768px) {
+    width: 100vw;
+    height: auto;
+    padding: 0 32px 16px;
+  }
+}
+
+.inputWrapper {
+  position: relative;
+}
+
+.emptyTodoWrapper {
+  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.emptyTodoImage {
+  width: 240px;
+  height: 250px;
+  margin-top: 16px;
+}
+
+.emptyTodoText {
+  color: var(--grey);
+  text-align: center;
+  font-family: 'Noto Sans TC';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.addTodoButton {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 4px;
+  right: 4px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.todoListWrapper {
+  background-color: var(--white);
+  margin-top: 16px;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  overflow: hidden;
+
+  @media screen and (max-width: 768px) {
+    overflow: scroll;
+    max-height: calc(100vh - 47px - 70px - 16px - 36px);
+  }
+}
+
+.todoListFooter {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 24px 24px;
+}
+
+.inProgressTodos {
+  color: var(--grey);
+  font-family: 'Noto Sans TC';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.clearFinishedTodo {
+  color: var(--light_grey);
+  font-family: 'Noto Sans TC';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  cursor: pointer;
+}

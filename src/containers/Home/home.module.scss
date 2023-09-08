@@ -1,0 +1,62 @@
+.wrapper {
+  display: flex;
+  column-gap: 100px;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (max-width: 768px) {
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: absolute;
+    top: 0;
+    padding: 48px 0;
+  }
+}
+
+.leftColumn {
+  width: 386px;
+  height: 448px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (max-width: 768px) {
+    width: auto;
+    height: auto;
+    padding-bottom: 16px;
+  }
+}
+
+.checkIcon {
+  width: 40px;
+  height: 40px;
+}
+
+.logoSection {
+  display: flex;
+  align-items: center;
+
+  > p {
+    font-family: 'Baloo Thambi 2';
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px;
+    color: var(--grey);
+  }
+}
+
+.mainImage {
+  background-image: url('../../assets/images/main_image.png');
+  width: 386px;
+  height: 386px;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}

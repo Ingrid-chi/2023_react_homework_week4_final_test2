@@ -1,0 +1,32 @@
+.wrapper {
+  background-color: var(--white);
+  display: flex;
+}
+
+.text {
+  color: var(--light_grey);
+  text-align: center;
+  font-family: 'Noto Sans TC';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+
+  width: 100%;
+  flex-grow: 1;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid var(--lightest_grey);
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.active {
+  border-bottom: 2px solid var(--grey);
+  color: var(--grey);
+}

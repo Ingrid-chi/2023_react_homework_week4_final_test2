@@ -1,0 +1,63 @@
+.wrapper {
+  background-image: url('../../assets/images/bg.png');
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+
+.checkIcon {
+  width: 33px;
+  height: 33px;
+}
+
+.logoSection {
+  position: absolute;
+  top: 16px;
+  left: 34px;
+  display: flex;
+  align-items: center;
+  background-color: var(--yellow);
+
+  > p {
+    font-family: 'Baloo Thambi 2';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    color: var(--grey);
+  }
+}
+
+.infoSection {
+  position: absolute;
+  top: 24px;
+  right: 32px;
+
+  display: flex;
+  gap: 24px;
+
+  > p {
+    color: var(--grey);
+    font-family: 'Noto Sans TC';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px;
+  }
+}
+
+.todoContent {
+  padding-top: 95px;
+  margin: 0 auto;
+  width: fit-content;
+
+  @media screen and (max-width: 768px) {
+    padding-top: 70px;
+  }
+}
+
+.nickName {
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}

@@ -1,0 +1,59 @@
+.wrapper {
+  height: 36px;
+  background-color: var(--white);
+  display: flex;
+  position: relative;
+
+  &:hover .close {
+    display: block;
+  }
+}
+
+.contentWrapper {
+  width: 100%;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding-bottom: 16px;
+  margin-right: 30px;
+  border-bottom: 1px solid var(--lightest_grey);
+}
+
+.text {
+  color: var(--grey);
+  font-family: 'Noto Sans TC';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.button {
+  width: 20px;
+  height: 20px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.inProgress {
+  flex-shrink: 0;
+  border-radius: 5px;
+  border: 1px solid var(--light_grey);
+  background: var(--white);
+}
+
+.textFinished {
+  color: var(--light_grey);
+  text-decoration-line: line-through;
+}
+
+.close {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  right: 0;
+  display: none;
+  cursor: pointer;
+}

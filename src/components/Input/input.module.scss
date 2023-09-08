@@ -1,0 +1,35 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  color: var(--grey);
+  font-family: 'Noto Sans TC';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding-bottom: 4px;
+}
+
+.input {
+  background-color: var(--white);
+  padding: 12px 16px;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  color: var(--grey);
+  font-size: 16px;
+  height: 47px;
+
+  &::placeholder {
+    color: var(--light_grey);
+    opacity: 1; /* Firefox */
+    font-family: 'Noto Sans TC';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 23px;
+  }
+}
