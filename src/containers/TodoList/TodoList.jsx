@@ -25,11 +25,12 @@ const TodoList = () => {
     try {
       const response = await axios.get(TODOS, {
         headers: {
-          Authorization: token,
+          Authorization: '',
         },
       });
       setTodos(response.data.data);
     } catch (err) {
+      notify('目前無法取得待辦清單');
       console.log({ err });
     }
   };
@@ -50,6 +51,7 @@ const TodoList = () => {
       setTodo('');
       getTodos();
     } catch (err) {
+      notify('目前無法新增待辦項目');
       console.log({ err });
     }
   };
@@ -134,7 +136,6 @@ const TodoList = () => {
 
   useEffect(() => {
     // 如果沒有 token，導回到根路由
-    console.log('useEffect triggered');
     if (!token) {
       notify('請先登入');
       navigate('/');
