@@ -67,8 +67,6 @@ const TodoList = () => {
     const todo = todos.find((todo) => todo.id === id);
     todo.content = todoEdit[id];
 
-    console.log({ todo });
-
     await axios.put(
       `${TODOS}${id}`,
       { content: todo.content },
@@ -148,19 +146,12 @@ const TodoList = () => {
   return (
     <div className={classes.wrapper}>
       <div className={classes.logoSection}>
-        <img
-          className={classes.checkIcon}
-          src={checkIcon}
-        />
+        <img className={classes.checkIcon} src={checkIcon} />
         <p>ONLINE TODO LIST</p>
       </div>
       <div className={classes.infoSection}>
         <p className={classes.nickName}>{nickname} 的待辦</p>
-        <Button
-          isTransparent
-          text='登出'
-          onClick={() => signOut()}
-        />
+        <Button isTransparent text='登出' onClick={() => signOut()} />
       </div>
       <div className={classes.todoContent}>
         <TodoListContent

@@ -22,6 +22,7 @@ const SignUp = () => {
   const [nicknameError, setNicknameError] = useState('');
 
   const notify = (message) => toast.error(message);
+  const notifySuccess = (message) => toast.success(message);
 
   const signUp = async () => {
     try {
@@ -31,6 +32,7 @@ const SignUp = () => {
         nickname,
       });
       localStorage.setItem('nickname', nickname);
+      notifySuccess('您已成功註冊');
     } catch (err) {
       const errorMessages = err.response.data.message;
       if (Array.isArray(errorMessages)) {
@@ -121,10 +123,7 @@ const SignUp = () => {
           />
         </div>
         <div className={classes.buttonsWrapper}>
-          <Button
-            text='註冊帳號'
-            onClick={() => handleSignUp()}
-          />
+          <Button text='註冊帳號' onClick={() => handleSignUp()} />
           <Button
             text='登入'
             isTransparent
