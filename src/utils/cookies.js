@@ -10,5 +10,5 @@ export const getCookieValue = (param) => {
 export const clearCookieValue = () => {
   // 將 cookie 的過期日期設定為過去的日期，同時保留其他 cookie（如果有的話）
   document.cookie =
-    'token=; expires=Fri, 31 Dec 9999 23:59:59 GMT; SameSite=None; Secure';
+    'token=; expires=Fri, 31 Dec 1970 23:59:59 GMT; SameSite=None; Secure';
 };
