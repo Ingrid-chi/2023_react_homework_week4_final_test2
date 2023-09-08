@@ -71,7 +71,7 @@ const SignIn = () => {
 
   return (
     <div className={classes.wrapper}>
-      <h3 className={classes.title}>最實用的線上代辦事項服務</h3>
+      <h3 className={classes.title}>最實用的線上待辦事項服務</h3>
       <div className={classes.inputWrapper}>
         <Input
           title='Email'
@@ -88,10 +88,7 @@ const SignIn = () => {
         />
       </div>
       <div className={classes.buttonsWrapper}>
-        <Button
-          text='登入'
-          onClick={() => handleSignIn()}
-        />
+        <Button text='登入' onClick={() => handleSignIn()} />
         <Button
           text='註冊帳號'
           isTransparent

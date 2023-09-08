@@ -42,7 +42,7 @@ const TodoContent = ({
     <div className={classes.wrapper}>
       <div className={classes.inputWrapper}>
         <Input
-          placeholder='新增代辦事項'
+          placeholder='新增待辦事項'
           onInputChange={setTodo}
           value={todo}
         />
@@ -54,10 +54,7 @@ const TodoContent = ({
       </div>
       {todoList.length !== 0 ? (
         <div className={classes.todoListWrapper}>
-          <Tabs
-            selectedTab={selectedTab}
-            setSelectedTab={setSelectedTab}
-          />
+          <Tabs selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
           <List
             todoList={getFilteredTodoList()}
             toggleTodoStatus={toggleTodoStatus}
@@ -81,10 +78,7 @@ const TodoContent = ({
       ) : (
         <div className={classes.emptyTodoWrapper}>
           <p className={classes.emptyTodoText}>目前尚無待辦事項</p>
-          <img
-            className={classes.emptyTodoImage}
-            src={emptyTodoListImage}
-          />
+          <img className={classes.emptyTodoImage} src={emptyTodoListImage} />
         </div>
       )}
     </div>
