@@ -25,7 +25,7 @@ const TodoList = () => {
     try {
       const response = await axios.get(TODOS, {
         headers: {
-          Authorization: '',
+          Authorization: token,
         },
       });
       setTodos(response.data.data);
